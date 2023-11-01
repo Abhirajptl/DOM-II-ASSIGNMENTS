@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Practise Selectors</title>
+  </head>
+  <body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div class="green">First DIV</div>
+    <div class="red">Second DIV</div>
+    <div class="blue">Third DIV</div>
+    <p class="green">First P</p>
+    <p class="red">Second P</p>
+    <p class="blue">Third P</p>
+    <hr />
+    <button onClick="changeH1()">Change H1</button>
+    <button onClick="changeH3()">Change H3</button>
+    <button onClick="changeH5()">Change H5</button>
+    <button onClick="changeGreen()">Change Green</button>
+    <button onClick="changeRed()">Change Red</button>
+    <button onClick="changeBlue()">Change Blue</button>
+    <script>
+      let changeh1 = document.getElementsByTagName("h1");
+      let changeh3 = document.getElementsByTagName("h3")
+      let changeh5 = document.getElementsByTagName("h5")
+      let changegreen = document.getElementsByClassName("green")
+      let changered= document.querySelectorAll(".red")
+      let changeblue= document.querySelectorAll(".blue")
+      
+      function changeH1() {
+          changeh1[0].style.color = "red";
+      }
+
+      function changeH3() {
+        changeh3[0].style.color = "green";
+        changeh3[1].style.color = "green";
+      }
+
+      function changeH5() {
+        // changeh5[0].style.color = "blue";
+        // changeh5[1].style.color = "blue";
+        // changeh5[2].style.color = "blue";
+        for(let i=0;i<changeh5.length;i++){
+          changeh5[i].style.color = "blue";
+        }
+      }
+
+      function changeGreen() {
+        changegreen[0].style.color = "green";
+        changegreen[1].style.color = "green";
+      }
+
+      function changeRed() {
+        changered[0].style.color = "red";
+        changered[1].style.color = "red";
+      }
+
+      function changeBlue() {
+        changeblue[1].style.color = "blue";
+        changeblue[0].style.color = "blue";
+      }
+    </script>
+  </body>
+</html>
